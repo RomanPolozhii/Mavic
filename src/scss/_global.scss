@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  position: relative;
+}
+body {
+  overflow-x: hidden;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button:focus,
+input:focus {
+  outline: transparent;
+}
+
+.container{
+  max-width: 1268px;
+  padding: 0 15px;
+  margin: 0 auto;
+}

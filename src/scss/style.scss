@@ -1,0 +1,102 @@
+@import "vars";
+@import "fonts";
+@import "global";
+
+//-----------------------------------------------------------------------------------------------------------
+//
+//                                                    START CODE
+//
+//-----------------------------------------------------------------------------------------------------------
+//Header=====================================================================================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  // .header__inner
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 47px;
+  }
+
+  // .header__logo
+
+  &__logo {
+  }
+
+  // .header__menu
+
+  &__menu {
+  }
+
+  // .header__list
+
+  &__list {
+  }
+
+  // .header__item
+
+  &__item {
+    display: inline-block;
+    & + & {
+      margin-left: 20px;
+    }
+  }
+
+  // .header__link
+
+  &__link {
+      font-size: 15px;
+      @extend %ubuntu-medium;
+      &:hover{
+          text-decoration: underline;
+      }
+  }
+
+  // .header__contact
+
+  &__contact {
+  }
+
+  // .header__btn
+
+  &__btn {
+    color: white;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    padding: 7px 28px;
+    margin-right: 8px;
+    font-size: 15px;
+    @extend %ubuntu-medium;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  // .header__phone
+
+  &__phone {
+    font-size: 16px;
+    color: white;
+    @extend %ubuntu-bold;
+  }
+}
+.container {
+}
+
+//Header=====================================================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+//
+//                                                    END CODE
+//
+//-----------------------------------------------------------------------------------------------------------
+
+@import "media";
