@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('components/_head.html')
+  @@include('components/_head.html')
 
-<body>
-  @@include('components/_header.html')
-  <!-- WRITE CODE HERE -->
+  <body>
+    @@include('components/_header.html')
+    <!-- WRITE CODE HERE -->
+    <!-- Page-section top -->
+    <section class="page-section">
+      <div class="section__bg top" style="background-image: url(../images/bg-1.jpg);">
+        <div class="page-section__inner">
+          <h1 class="page-section__title">
+            Mavic 2 Pro
+          </h1>
+            <img class="page-section__img" src="images/mavic.png" alt="" />
+          <div class="page-section__subtitle">
+            Квадрокоптер Dji Mavic 2 Pro с профессиональной камерой Hasselblad
+          </div>
+          <div class="page-section__social">
+            <a class="social__link" href="#">
+              <svg class="facebook"><use xlink:href="#facebook"></use></svg>
+            </a>
+            <a class="social__link" href="#">
+              <svg class="youtube"><use xlink:href="#youtube"></use></svg>
+            </a>
+            <a class="social__link" href="#">
+              <svg class="instagram"><use xlink:href="#instagram"></use></svg>
+            </a>
+          </div>
+        </div>
+        <img
+          class="pages-section__arrow-down"
+          src="images/arrow-down.png"
+          alt=""
+        />
+      </div>
+    </section>
+    <!-- /Page-section top -->
 
-  <!-- STOP WRITE CODE -->
-  @@include('components/_footer.html')
-  @@include('components/_scripts.html')
-</body>
-
+    <!-- STOP WRITE CODE -->
+    @@include('components/_footer.html') @@include('components/_scripts.html')
+  </body>
 </html>
