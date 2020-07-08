@@ -90,20 +90,69 @@
   }
 }
 //Header=====================================================================================================
-//Page-section top===========================================================================================
-.page-section {
-  // .page-section__inner
+//first-screen top===========================================================================================
+.page__bg {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+      119.35deg,
+      rgba(23, 26, 28, 0.72) 0%,
+      #5e5e57 100%
+    );
+    opacity: 0.15;
+    z-index: 1;
+  }
+}
+
+.top {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(
+      45.97% 54.43% at 50% 45.57%,
+      rgba(23, 26, 28, 0) 50.28%,
+      rgba(23, 26, 28, 0.00225974) 50.29%,
+      rgba(4, 5, 5, 0.820343) 58.72%,
+      rgba(5, 5, 6, 0.792703) 80.08%,
+      #000000 87.89%
+    );
+    opacity: 0.4;
+  }
+}
+.first-screen {
+  position: relative;
+
+  // .first-screen__inner
 
   &__inner {
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    height: calc(100vh - 30%);
   }
 
-  // .page-section__title
+  // .first-screen__title
 
   &__title {
     font-size: 96px;
@@ -112,100 +161,198 @@
     margin-bottom: 25px;
   }
 
-  // .page-section__img
+  // .first-screen__img
 
   &__img {
-      margin-bottom: 26px;
+    margin-bottom: 25px;
   }
 
-  // .page-section__subtitle
+  // .first-screen__subtitle
 
   &__subtitle {
-    color: white;
     font-size: 17px;
+    line-height: 150%;
     @extend %ubuntu-light;
+    color: white;
     max-width: 324px;
     text-align: center;
     margin-bottom: 35px;
   }
 
-  // .page-section__social
+  // .first-screen__social
 
   &__social {
   }
-}
-.section {
-  // .section__bg
 
-  &__bg {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      width: 100%;
-      height: 100vh;
-      background: radial-gradient(
-        45.97% 54.43% at 50% 45.57%,
-        rgba(23, 26, 28, 0) 50.28%,
-        rgba(23, 26, 28, 0.00225974) 50.29%,
-        rgba(4, 5, 5, 0.820343) 58.72%,
-        rgba(5, 5, 6, 0.792703) 80.08%,
-        #000000 87.89%
-      );
-      opacity: 0.4;
+  // .first-screen__social-link
+
+  &__social-link {
+    margin-right: 50px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: white;
+      fill-opacity: 0.5;
+
+      transition: all 0.3s;
+
+      &:hover {
+        fill-opacity: 1;
+      }
     }
   }
-}
-.top {
-}
-.social {
-  // .social__link
-
-  &__link {
-  }
-}
-.facebook,
-.youtube,
-.instagram {
-  width: 40px;
-  height: 40px;
-  fill: white;
-  fill-opacity: 0.5;
-  margin-right: 50px;
-  transition: all 0.3s;
-  cursor: pointer;
-  &:hover {
-    fill-opacity: 1;
-  }
-}
-
-.instagram {
-  margin-right: 0;
-}
-.pages-section {
-  // .pages-section__arrow-down
-
   &__arrow-down {
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      z-index: 1;
-      bottom: 30px;;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: arrows-down 1.5s linear infinite;
   }
 }
 
-//Page-section top===========================================================================================
+@keyframes arrows-down{
+    0%{
+        bottom: 30px;
+    }
+    50%{
+        bottom: 20px;
+    }
+    100%{
+        bottom: 30px;
+    }
+}
+//first-screen top===========================================================================================
+//Page-Product===============================================================================================
+.product {
+  position: relative;
+
+  // .product__wrapper
+
+  &__wrapper {
+    position: absolute;
+    z-index: 2;
+    top: 30%;
+    left: 0;
+    right: 0;
+  }
+
+  // .product__title
+
+  &__title {
+    padding-left: 25px;
+    margin-bottom: 55px;
+  }
+
+  // .product__inner
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .product__subtitle
+
+  &__subtitle {
+    max-width: 500px;
+    padding-left: 56px;
+    p {
+      font-size: 17px;
+      line-height: 150%;
+      @extend %ubuntu-light;
+      margin-bottom: 30px;
+      color: white;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // .product__slider-box
+
+  &__slider-box {
+    position: relative;
+    max-width: 560px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      right: -17px;
+      width: 100%;
+      height: 100%;
+      border: 4px solid #ffffff;
+    }
+  }
+
+  // .product__slider-text
+
+  &__slider-text {
+    position: absolute;
+    bottom: 30px;
+    left: -40%;
+    z-index: 2;
+    font-size: 24px;
+    line-height: 28px;
+    color: white;
+    @extend %ubuntu-medium;
+    max-width: 281px;
+    text-align: right;
+  }
+
+  // .product__slider
+
+  &__slider {
+  }
+
+  // .product__slider-item
+
+  &__slider-item {
+  }
+
+  // .product__slider-img
+
+  &__slider-img {
+  }
+}
+.page {
+  // .page__bg
+
+  &__bg {
+  }
+}
+
+.product__slider-arrows {
+  position: absolute;
+  bottom: -44px;
+  padding: 14px 25px;
+  right: 0;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  svg {
+    stroke: #000;
+    width: 9px;
+    height: 16px;
+  }
+}
+
+.product__slider-left {
+  right: 59px;
+}
+
+.product__slider-arrows.slick-disabled {
+  background-color: black;
+  svg {
+    stroke: white;
+  }
+}
+
+//Page-Product===============================================================================================
 
 //-----------------------------------------------------------------------------------------------------------
 //

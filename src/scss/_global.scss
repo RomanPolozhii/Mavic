@@ -45,15 +45,14 @@ input:focus {
   outline: transparent;
 }
 
-.ibg{
+.ibg {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  }
-  
-  .ibg img{
-  
+}
+
+.ibg img {
   width: 0;
   height: 0;
   position: absolute;
@@ -61,10 +60,17 @@ input:focus {
   left: 0;
   opacity: 0;
   visibility: hidden;
-  }
+}
 
-.container{
+.container {
   max-width: 1268px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.title{
+  font-size: 44px;
+  color: white;
+  @extend %sanfran-regular;
 }
