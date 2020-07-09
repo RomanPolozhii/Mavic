@@ -159,27 +159,12 @@
     margin-bottom: 35px;
   }
 
-  // .first-screen__social
-
-  &__social {
-  }
-
   // .first-screen__social-link
 
-  &__social-link {
-    cursor: pointer;
-    & + & {
-      margin-left: 50px;
-    }
-    svg {
-      width: 40px;
-      height: 40px;
-      fill: white;
-      fill-opacity: 0.5;
-      transition: all 0.3s;
-      &:hover {
-        fill-opacity: 1;
-      }
+  .social-link {
+    margin-right: 50px;
+    &:last-child{
+        margin-right: 0;
     }
   }
 
@@ -193,23 +178,19 @@
     animation: arrows-down 1.5s linear infinite;
   }
 }
-.top {
-}
-.wrapper-section {
-}
-.container {
-}
-.social {
-  // .social__svg
 
-  &__svg {
+.social-link {
+  cursor: pointer;
+  svg {
+    width: 40px;
+    height: 40px;
+    fill: white;
+    fill-opacity: 0.5;
+    transition: all 0.3s;
+    &:hover {
+      fill-opacity: 1;
+    }
   }
-}
-.facebook {
-}
-.youtube {
-}
-.instagram {
 }
 
 @keyframes arrows-down {
@@ -343,18 +324,6 @@
   background-color: black;
   svg {
     stroke: white;
-  }
-}
-.wrapper-section {
-}
-.container {
-}
-.title {
-}
-.first-screen {
-  // .first-screen__arrow-down
-
-  &__arrow-down {
   }
 }
 
@@ -506,11 +475,6 @@
     padding: 0 46px;
   }
 
-  // .specifications__column
-
-  &__column {
-  }
-
   // .specifications__item
 
   &__item {
@@ -567,39 +531,11 @@
       max-width: 280px;
     }
   }
-
-  // .specifications__img
-
-  &__img {
-  }
-}
-.section-bg {
-}
-.ibg {
-}
-.advantages {
-  // .advantages__wrapper
-
-  &__wrapper {
-  }
-}
-.wrapper-section {
-}
-.container {
-}
-.title {
 }
 
 //specifications=============================================================================================
 //questions==================================================================================================
-.page-section {
-}
 .questions {
-  // .questions__wrapper
-
-  &__wrapper {
-  }
-
   // .questions__title
 
   &__title {
@@ -609,20 +545,25 @@
   // .questions__box
 
   &__box {
-    position: relative;
     max-width: 690px;
-    &::before {
-      position: absolute;
-      bottom: 20px;
-      right: -392px;
-      content: url("../images/mavic-2.png");
-    }
   }
 
   // .questions__box-item
 
   &__box-item {
     margin-bottom: 5px;
+  }
+
+  // .questions__box-mavic
+
+  &__box-mavic {
+    position: relative;
+    &::before {
+      position: absolute;
+      bottom: -100px;
+      right: -392px;
+      content: url("../images/mavic-2.png");
+    }
   }
 
   // .questions__box-title
@@ -652,8 +593,6 @@
       padding: 34px 36px;
       transition: all 0.6s;
     }
-
-    // .questions__btn
   }
 
   // .questions__subtitle
@@ -672,26 +611,179 @@
     }
   }
 }
-.section-bg {
-}
-.ibg {
-}
-.wrapper-section {
-}
-.container {
-}
-.title {
-}
 
 .questions__box-item.questions__box-active {
-    .questions__box-title::before {
+  .questions__box-title::before {
     content: url("../images/arrow-up.svg");
   }
-  .questions__box-subtitle{
-      display: block;
+  .questions__box-subtitle {
+    display: block;
   }
 }
 //questions==================================================================================================
+//contact====================================================================================================
+.contacts {
+  // .contacts__inner
+
+  &__wrapper {
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 170px 0 55px;
+  }
+
+  // .contacts__column
+
+  &__column {
+  }
+
+  // .contacts__item
+
+  &__item {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      display: block;
+      font-size: 15px;
+      @extend %ubuntu-light;
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // .contacts__item-title
+
+  &__item-title {
+    font-size: 21px;
+    @extend %ubuntu-bold;
+    color: white;
+    margin-bottom: 13px;
+  }
+
+  // .contacts__form-wrapper
+
+  &__form-wrapper {
+    max-width: 570px;
+  }
+
+  // .contacts__form-title
+
+  &__form-title {
+    font-size: 21px;
+    color: white;
+    @extend %ubuntu-bold;
+    margin-bottom: 13px;
+  }
+
+  // .contacts__form-subtitle
+
+  &__form-subtitle {
+    color: white;
+    font-size: 15px;
+    @extend %ubuntu-light;
+    margin-bottom: 12px;
+  }
+
+  // .contacts__form-inner
+
+  &__form-inner {
+    display: flex;
+    margin-bottom: 10px;
+    input {
+      width: 100%;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      margin-right: 10px;
+      color: white;
+      &:last-child {
+        margin-right: 0;
+      }
+      &::placeholder {
+        font-size: 13px;
+        @extend %ubuntu-medium;
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+  textarea {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    resize: none;
+    border: none;
+    width: 100%;
+    min-height: 144px;
+    margin-bottom: 10px;
+    &::placeholder {
+      font-size: 13px;
+      @extend %ubuntu-medium;
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    padding: 7px 28px;
+    margin-right: 8px;
+    font-size: 15px;
+    @extend %ubuntu-medium;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+  // .contacts__social
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contaacts {
+  // .contaacts__title
+
+  &__title {
+    padding-left: 25px;
+    margin-bottom: 56px;
+  }
+}
+
+// .social-link
+
+.social-link {
+  & + & {
+    margin-top: 24px;
+  }
+}
+
+//contact====================================================================================================
+//footer====================================================================================================
+.footer {
+  position: relative;
+  &__copy {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    color: white;
+    opacity: 0.64;
+  }
+}
+//footer====================================================================================================
 
 //-----------------------------------------------------------------------------------------------------------
 //
