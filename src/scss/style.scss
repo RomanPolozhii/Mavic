@@ -541,13 +541,11 @@
   &__item-line-3 {
     top: -65px;
     right: -128%;
-
   }
 
   &__item-line-4 {
     top: -76px;
     left: -55%;
-
   }
   // .specifications__item-title
 
@@ -593,6 +591,107 @@
 }
 
 //specifications=============================================================================================
+//questions==================================================================================================
+.page-section {
+}
+.questions {
+  // .questions__wrapper
+
+  &__wrapper {
+  }
+
+  // .questions__title
+
+  &__title {
+    margin-bottom: 46px;
+  }
+
+  // .questions__box
+
+  &__box {
+    position: relative;
+    max-width: 690px;
+    &::before {
+      position: absolute;
+      bottom: 20px;
+      right: -392px;
+      content: url("../images/mavic-2.png");
+    }
+  }
+
+  // .questions__box-item
+
+  &__box-item {
+    margin-bottom: 5px;
+  }
+
+  // .questions__box-title
+
+  &__box-title {
+    position: relative;
+    font-size: 21px;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 20px 120px 24px 39px;
+    background-color: rgba(0, 0, 0, 0.3);
+    @extend %ubuntu-medium;
+    cursor: pointer;
+    &::before {
+      content: url("../images/arrow-down.svg");
+      position: absolute;
+      top: 0;
+      right: -72px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: white;
+      width: 13px;
+      height: 20px;
+      padding: 34px 36px;
+      transition: all 0.6s;
+    }
+
+    // .questions__btn
+  }
+
+  // .questions__subtitle
+
+  &__box-subtitle {
+    cursor: pointer;
+    transition: all 0.3s;
+    display: none;
+    p {
+      font-size: 15px;
+      line-height: 150%;
+      @extend %ubuntu-light;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 10px 22px 75px 50px;
+    }
+  }
+}
+.section-bg {
+}
+.ibg {
+}
+.wrapper-section {
+}
+.container {
+}
+.title {
+}
+
+.questions__box-item.questions__box-active {
+    .questions__box-title::before {
+    content: url("../images/arrow-up.svg");
+  }
+  .questions__box-subtitle{
+      display: block;
+  }
+}
+//questions==================================================================================================
 
 //-----------------------------------------------------------------------------------------------------------
 //
